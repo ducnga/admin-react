@@ -34,7 +34,7 @@ class Master extends Component {
         }
     }
     componentDidMount() {
-        setTimeout(() => this.setState({ loading: true }), 1000);
+        setTimeout(() => this.setState({ loading: true }), 500);
     }
 
     render() {

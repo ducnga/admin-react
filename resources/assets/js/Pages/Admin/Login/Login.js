@@ -62,9 +62,7 @@ class Login extends Component {
     handleClose() {
         this.setState({ open: false });
     };
-    render(props) {
-        console.log(props);
-        // const { classes } = props;
+    render() {
         const actions = [
             <Button variant="raised" color="primary" onClick={this.handleClose.bind(this)} >
                 Ok
@@ -80,20 +78,20 @@ class Login extends Component {
                         <div className="loginbox-title">SIGN IN</div>
                         <TextField
                             placeholder="Email đăng nhập"
-                            floatingLabelText="Email đăng nhập website"
+                            label="Email đăng nhập website"
                             name="Email"
-                            value={this.state.Email}
+                            defaultValue={this.state.Email}
                             onChange={this.onChange.bind(this)}
-                            errorText={this.state.errorEmail}
+                            // errorText={this.state.errorEmail}
                         /><br />
                         <TextField
                             placeholder="Mật khẩu"
-                            floatingLabelText="Mật khẩu"
+                            label="Mật khẩu"
                             type="password"
                             name="Password"
-                            value={this.state.Password}
+                            defaultValue={this.state.Password}
                             onChange={this.onChange.bind(this)}
-                            errorText={this.state.errorPassword}
+                            // errorText={this.state.errorPassword}
                         />
                         {/* className={classes.button} */}
                         <div className="loginbox-submit">
