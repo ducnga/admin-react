@@ -22,11 +22,25 @@ require('material-ui');
 // });
 // require('./components/Index');
 
+import React from 'react';
+import { render } from 'react-dom';
+import { BrowserRouter as Router} from 'react-router-dom';
 
-import React, { Component } from 'react'
-import { render } from 'react-dom'
-// import Master from './components/Master'
-// render(<Master />,document.getElementById('root'));
+// import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-import Sidebar from './layouts/Sidebar'
-render(<Sidebar/>,document.getElementById('root'));
+import Master from './components/Master';
+// redux
+import { createStore } from 'redux';
+import store from './configStore';
+import { Provider } from 'react-redux';
+
+render(
+    <Provider store={store}>
+        <Router>
+            {/* <MuiThemeProvider> */}
+                <Master />
+            {/* </MuiThemeProvider> */}
+        </Router>
+    </Provider>,
+    document.getElementById('root')
+);
