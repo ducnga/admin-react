@@ -59,7 +59,7 @@ class Login extends Component {
                     res => {
                         this.setState ({
                             isLogin:true,
-                        }),
+                        })
                         console.log(this.state);
                     },
                    
