@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 import { Route, Switch, Link, Redirect, IndexRoute } from 'react-router-dom';
-import asyncComponent from './AsyncComponent';
 
+import asyncComponent from './AsyncComponent';
 
 const Dashboard = asyncComponent(() =>
 	require('./../../container/Admin/Dashboard/DashboardContainer'));
 
 const LoginContainer = asyncComponent(() =>
-require('./../../container/Admin/Login/LoginContainer'));
+	require('./../../container/Admin/Login/LoginContainer'));
 
 export default class Routes extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-		  isLogin: false
+			isLogin: false
 		}
-	  }
+	}
 	render() {
 		return (
 			<Switch>

@@ -60,7 +60,7 @@ class Login extends Component {
                     //         isLogin:true
                     //     })
                     // },
-                    console.log(this.props.Login);
+                   
                 )
                 .catch(e => {
                     console.error(e);
