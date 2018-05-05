@@ -8,6 +8,10 @@ import ViewList from '@material-ui/icons/ViewList';
 import Edit from '@material-ui/icons/Edit';
 import ShoppingCart from '@material-ui/icons/ShoppingCart';
 import PlaylistPlay from '@material-ui/icons/PlaylistPlay';
+import Book from '@material-ui/icons/Book';
+import SupervisorAccount from '@material-ui/icons/SupervisorAccount';
+import PermIdentity from '@material-ui/icons/PermIdentity';
+import Description from '@material-ui/icons/Description';
 
 export const ListItemSidebar = (
   <div>
@@ -49,25 +53,25 @@ export const ListItemSidebar = (
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <InboxIcon />
+        <Book />
       </ListItemIcon>
       <ListItemText primary="Đơn hàng" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <InboxIcon />
+        <Description />
       </ListItemIcon>
       <ListItemText primary="Tin đăng" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <InboxIcon />
+        <SupervisorAccount />
       </ListItemIcon>
       <ListItemText primary="Nhân viên" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <InboxIcon />
+        <PermIdentity />
       </ListItemIcon>
       <ListItemText primary="Thành viên" />
     </ListItem>
