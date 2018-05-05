@@ -4,11 +4,19 @@ import { withStyles } from 'material-ui/styles';
 import Button from 'material-ui/Button';
 import { Helmet } from "react-helmet";
 import Dialog from 'material-ui/Dialog';
+import Grid from 'material-ui/Grid';
+import { Redirect } from 'react-router-dom';
 
+import '../../../../css/styles.css';
 const styles = theme => ({
     button: {
       margin: theme.spacing.unit,
+    },
+    div:{
+        margin:'79px',
     }
+
+
   });
 
 class Login extends Component {
@@ -45,14 +53,22 @@ class Login extends Component {
         }
         else {
             await this.props.sendLogin(Email, Password)
-                .then(res => console.log(res.data))
+                .then(
+                    res => console.log(res)
+                    // res => {
+                    //     this.setState ({
+                    //         isLogin:true
+                    //     })
+                    // },
+                    console.log(this.props.Login);
+                )
                 .catch(e => {
                     console.error(e);
                     if (e.response.data.Email) { this.setState({ errorEmail: e.response.data.Email }) }
                     if (e.response.data.Password) { this.setState({ errorPassword: e.response.data.Password }) }
                     if (e.response.data.Msg) { this.setState({ Msg: e.response.data.Msg, open: true }) }
                 });
-            console.log(this.props.Login);
+            
         }
     }
     handleOpen() {
@@ -69,35 +85,41 @@ class Login extends Component {
             </Button>
         ];
         return (
-            <div>
+            <div className='container'>
                 <Helmet>
                     <title>Đăng nhập vào quản trị website</title>
                 </Helmet>
-                <div className="login-container">
-                    <div className="loginbox bg-white">
-                        <div className="loginbox-title">SIGN IN</div>
-                        <TextField
-                            placeholder="Email đăng nhập"
-                            label="Email đăng nhập website"
-                            name="Email"
-                            defaultValue={this.state.Email}
-                            onChange={this.onChange.bind(this)}
-                            // errorText={this.state.errorEmail}
-                        /><br />
-                        <TextField
-                            placeholder="Mật khẩu"
-                            label="Mật khẩu"
-                            type="password"
-                            name="Password"
-                            defaultValue={this.state.Password}
-                            onChange={this.onChange.bind(this)}
-                            // errorText={this.state.errorPassword}
-                        />
-                        {/* className={classes.button} */}
-                        <div className="loginbox-submit">
-                            <Button  variant="raised" color="primary" onClick={this.onSubmit.bind(this)} >
-                                Đăng nhập
-                            </Button>
+                <div>
+                    <div className='container login-container'>
+                        <div className="loginbox bg-white">
+                            <h3 className="loginbox-title center">Đăng nhập</h3>
+                            <TextField
+                                placeholder="Email đăng nhập"
+                                label="Email đăng nhập"
+                                name="Email"
+                                defaultValue={this.state.Email}
+                                onChange={this.onChange.bind(this)}
+                                fullWidth
+                                error={this.state.errorPassword}
+                            /><br />
+                            <TextField
+                                placeholder="Mật khẩu"
+                                label="Mật khẩu"
+                                type="password"
+                                name="Password"
+                                defaultValue={this.state.Password}
+                                onChange={this.onChange.bind(this)}
+                                fullWidth
+                                error={this.state.errorPassword}
+                            />
+                            {/* className={classes.button} */}
+                            <div className="loginbox-submit">
+                                <center>
+                                    <Button  variant="raised" color="primary" onClick={this.onSubmit.bind(this)} >
+                                        Đăng nhập
+                                    </Button>
+                                </center>
+                            </div>
                         </div>
                     </div>
                 </div>

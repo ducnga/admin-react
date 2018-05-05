@@ -5,7 +5,7 @@ import Drawer from 'material-ui/Drawer';
 import Toolbar from 'material-ui/Toolbar';
 import List from 'material-ui/List';
 import Divider from 'material-ui/Divider';
-import { mailFolderListItems, otherMailFolderListItems } from './tileData';
+import { ListItemSidebar } from './SidebarItem';
 
 const drawerWidth = 240;
 
@@ -28,9 +28,7 @@ function ClippedDrawer(props) {
         }}
       >
         <div className={classes.toolbar} />
-        <List>{mailFolderListItems}</List>
-        <Divider />
-        <List>{otherMailFolderListItems}</List>
+        <List>{ListItemSidebar}</List>
       </Drawer>
   );
 }

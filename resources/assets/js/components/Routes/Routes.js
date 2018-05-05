@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { Route, Switch, Link, Redirect, IndexRoute } from 'react-router-dom';
-import Dashboard from './../../container/Admin/Dashboard/DashboardContainer';
-import LoginContainer from './../../container/Admin/Login/LoginContainer';
+import asyncComponent from './AsyncComponent';
+
+
+const Dashboard = asyncComponent(() =>
+	require('./../../container/Admin/Dashboard/DashboardContainer'));
+
+const LoginContainer = asyncComponent(() =>
+require('./../../container/Admin/Login/LoginContainer'));
 
 export default class Routes extends Component {
 	constructor(props) {
