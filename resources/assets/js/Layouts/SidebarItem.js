@@ -7,11 +7,12 @@ import Settings from '@material-ui/icons/Settings';
 import ViewList from '@material-ui/icons/ViewList';
 import Edit from '@material-ui/icons/Edit';
 import ShoppingCart from '@material-ui/icons/ShoppingCart';
-import PlaylistPlay from '@material-ui/icons/PlaylistPlay';
+import PermMedia from '@material-ui/icons/PermMedia';
 import Book from '@material-ui/icons/Book';
 import SupervisorAccount from '@material-ui/icons/SupervisorAccount';
 import PermIdentity from '@material-ui/icons/PermIdentity';
 import Description from '@material-ui/icons/Description';
+import Close from '@material-ui/icons/Close';
 
 export const ListItemSidebar = (
   <div>
@@ -47,7 +48,7 @@ export const ListItemSidebar = (
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <PlaylistPlay />
+        <PermMedia />
       </ListItemIcon>
       <ListItemText primary="Media" />
     </ListItem>
@@ -74,6 +75,12 @@ export const ListItemSidebar = (
         <PermIdentity />
       </ListItemIcon>
       <ListItemText primary="Thành viên" />
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <Close />
+      </ListItemIcon>
+      <ListItemText primary="Đăng xuất" />
     </ListItem>
   </div>
 );
