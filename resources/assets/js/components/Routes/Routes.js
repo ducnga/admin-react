@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch, Link, Redirect, IndexRoute } from 'react-router-dom';
+import { connect } from 'react-redux';
 // import Loadable from 'loadable-components';
 import asyncComponent from './AsyncComponent';
 // const Loading = () => <div>Loading...</div>;
@@ -16,11 +17,11 @@ const Dashboard = asyncComponent(() =>
 const LoginContainer = asyncComponent(() =>
 	require('./../../container/Admin/Login/LoginContainer'));
 
-export default class Routes extends Component {
+class Routes extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			isLogin: false
+			isLogin: props.isLogin
 		}
 	}
 	render() {
@@ -43,3 +44,9 @@ export default class Routes extends Component {
 		);
 	}
 }
+function mapStateToProps(state) {
+    return {
+        isLogin: state.Login.isLogin
+    };
+}
+export default connect(mapStateToProps, null)(Routes)

@@ -30,7 +30,6 @@ class Login extends Component {
             Msg: null,
             errorEmail: null,
             errorPassword: null
-
         }
     }
     onChange(event) {
