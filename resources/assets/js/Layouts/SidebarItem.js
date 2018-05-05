@@ -13,6 +13,14 @@ import SupervisorAccount from '@material-ui/icons/SupervisorAccount';
 import PermIdentity from '@material-ui/icons/PermIdentity';
 import Description from '@material-ui/icons/Description';
 import Close from '@material-ui/icons/Close';
+import Business from '@material-ui/icons/Business';
+import ExpansionPanel, {
+  ExpansionPanelSummary,
+  ExpansionPanelDetails,
+} from 'material-ui/ExpansionPanel';
+import Typography from 'material-ui/Typography';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+
 
 export const ListItemSidebar = (
   <div>
@@ -22,12 +30,32 @@ export const ListItemSidebar = (
       </ListItemIcon>
       <ListItemText primary="Tổng quan" />
     </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <Settings />
-      </ListItemIcon>
-      <ListItemText primary="Cấu hình" /> 
-    </ListItem>
+
+    <ExpansionPanel>
+      <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+        <ListItemIcon>
+          <Settings />
+        </ListItemIcon>
+        <ListItemText primary="Cấu hình" />
+      </ExpansionPanelSummary>
+      <ExpansionPanelDetails>
+        <ul>
+          <ListItem button>
+            <ListItemIcon>
+              <Business />
+            </ListItemIcon>
+            <ListItemText primary="Công ty" />
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <HomeIcon />
+            </ListItemIcon>
+            <ListItemText primary="Công ty" />
+          </ListItem>
+          </ul>
+      </ExpansionPanelDetails>
+    </ExpansionPanel>
+
     <ListItem button>
       <ListItemIcon>
         <ViewList />

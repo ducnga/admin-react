@@ -54,12 +54,13 @@ class Login extends Component {
         else {
             await this.props.sendLogin(Email, Password)
                 .then(
-                    res => console.log(res)
-                    // res => {
-                    //     this.setState ({
-                    //         isLogin:true
-                    //     })
-                    // },
+                    // res => console.log(res)
+                    res => {
+                        this.setState ({
+                            isLogin:true,
+                        }),
+                        console.log(this.state);
+                    },
                    
                 )
                 .catch(e => {
