@@ -96327,7 +96327,7 @@ var Master = function (_Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_material_ui_List___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_material_ui_List__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_material_ui_Divider__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_material_ui_Divider___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_material_ui_Divider__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__tileData__ = __webpack_require__(578);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__SidebarItem__ = __webpack_require__(642);
 
 
 
@@ -96365,13 +96365,7 @@ function ClippedDrawer(props) {
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       __WEBPACK_IMPORTED_MODULE_5_material_ui_List___default.a,
       null,
-      __WEBPACK_IMPORTED_MODULE_7__tileData__["a" /* mailFolderListItems */]
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6_material_ui_Divider___default.a, null),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_5_material_ui_List___default.a,
-      null,
-      __WEBPACK_IMPORTED_MODULE_7__tileData__["b" /* otherMailFolderListItems */]
+      __WEBPACK_IMPORTED_MODULE_7__SidebarItem__["a" /* ListItemSidebar */]
     )
   );
 }
@@ -96383,122 +96377,7 @@ ClippedDrawer.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_2_material_ui_styles__["withStyles"])(styles)(ClippedDrawer));
 
 /***/ }),
-/* 578 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return mailFolderListItems; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return otherMailFolderListItems; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_material_ui_List__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_material_ui_List___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_material_ui_List__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_ui_icons_MoveToInbox__ = __webpack_require__(579);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_ui_icons_MoveToInbox___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__material_ui_icons_MoveToInbox__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__material_ui_icons_Drafts__ = __webpack_require__(585);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__material_ui_icons_Drafts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__material_ui_icons_Drafts__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_icons_Star__ = __webpack_require__(586);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_icons_Star___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__material_ui_icons_Star__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_ui_icons_Send__ = __webpack_require__(587);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_ui_icons_Send___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__material_ui_icons_Send__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__material_ui_icons_Mail__ = __webpack_require__(588);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__material_ui_icons_Mail___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__material_ui_icons_Mail__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__material_ui_icons_Delete__ = __webpack_require__(589);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__material_ui_icons_Delete___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__material_ui_icons_Delete__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__material_ui_icons_Report__ = __webpack_require__(590);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__material_ui_icons_Report___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__material_ui_icons_Report__);
-
-
-
-
-
-
-
-
-
-
-
-var mailFolderListItems = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-  'div',
-  null,
-  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItem"],
-    { button: true },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemIcon"],
-      null,
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__material_ui_icons_MoveToInbox___default.a, null)
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemText"], { primary: 'Inbox' })
-  ),
-  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItem"],
-    { button: true },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemIcon"],
-      null,
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__material_ui_icons_Star___default.a, null)
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemText"], { primary: 'Starred' })
-  ),
-  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItem"],
-    { button: true },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemIcon"],
-      null,
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__material_ui_icons_Send___default.a, null)
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemText"], { primary: 'Send mail' })
-  ),
-  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItem"],
-    { button: true },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemIcon"],
-      null,
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__material_ui_icons_Drafts___default.a, null)
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemText"], { primary: 'Drafts' })
-  )
-);
-
-var otherMailFolderListItems = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-  'div',
-  null,
-  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItem"],
-    { button: true },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemIcon"],
-      null,
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_icons_Mail___default.a, null)
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemText"], { primary: 'All mail' })
-  ),
-  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItem"],
-    { button: true },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemIcon"],
-      null,
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__material_ui_icons_Delete___default.a, null)
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemText"], { primary: 'Trash' })
-  ),
-  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItem"],
-    { button: true },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemIcon"],
-      null,
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__material_ui_icons_Report___default.a, null)
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemText"], { primary: 'Spam' })
-  )
-);
-
-/***/ }),
+/* 578 */,
 /* 579 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -96685,168 +96564,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _shallowEqual2.default;
 
 /***/ }),
-/* 585 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _createSvgIcon = __webpack_require__(43);
-
-var _createSvgIcon2 = _interopRequireDefault(_createSvgIcon);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = (0, _createSvgIcon2.default)(_react2.default.createElement(
-  'g',
-  null,
-  _react2.default.createElement('path', { d: 'M21.99 8c0-.72-.37-1.35-.94-1.7L12 1 2.95 6.3C2.38 6.65 2 7.28 2 8v10c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2l-.01-10zM12 13L3.74 7.84 12 3l8.26 4.84L12 13z' })
-), 'Drafts');
-
-/***/ }),
-/* 586 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _createSvgIcon = __webpack_require__(43);
-
-var _createSvgIcon2 = _interopRequireDefault(_createSvgIcon);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = (0, _createSvgIcon2.default)(_react2.default.createElement(
-  'g',
-  null,
-  _react2.default.createElement('path', { d: 'M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z' })
-), 'Star');
-
-/***/ }),
-/* 587 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _createSvgIcon = __webpack_require__(43);
-
-var _createSvgIcon2 = _interopRequireDefault(_createSvgIcon);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = (0, _createSvgIcon2.default)(_react2.default.createElement(
-  'g',
-  null,
-  _react2.default.createElement('path', { d: 'M2.01 21L23 12 2.01 3 2 10l15 2-15 2z' })
-), 'Send');
-
-/***/ }),
-/* 588 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _createSvgIcon = __webpack_require__(43);
-
-var _createSvgIcon2 = _interopRequireDefault(_createSvgIcon);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = (0, _createSvgIcon2.default)(_react2.default.createElement(
-  'g',
-  null,
-  _react2.default.createElement('path', { d: 'M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z' })
-), 'Mail');
-
-/***/ }),
-/* 589 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _createSvgIcon = __webpack_require__(43);
-
-var _createSvgIcon2 = _interopRequireDefault(_createSvgIcon);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = (0, _createSvgIcon2.default)(_react2.default.createElement(
-  'g',
-  null,
-  _react2.default.createElement('path', { d: 'M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z' })
-), 'Delete');
-
-/***/ }),
-/* 590 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _createSvgIcon = __webpack_require__(43);
-
-var _createSvgIcon2 = _interopRequireDefault(_createSvgIcon);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = (0, _createSvgIcon2.default)(_react2.default.createElement(
-  'g',
-  null,
-  _react2.default.createElement('path', { d: 'M15.73 3H8.27L3 8.27v7.46L8.27 21h7.46L21 15.73V8.27L15.73 3zM12 17.3c-.72 0-1.3-.58-1.3-1.3 0-.72.58-1.3 1.3-1.3.72 0 1.3.58 1.3 1.3 0 .72-.58 1.3-1.3 1.3zm1-4.3h-2V7h2v6z' })
-), 'Report');
-
-/***/ }),
+/* 585 */,
+/* 586 */,
+/* 587 */,
+/* 588 */,
+/* 589 */,
+/* 590 */,
 /* 591 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -96896,7 +96619,7 @@ function ClippedDrawer(props) {
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         __WEBPACK_IMPORTED_MODULE_6_material_ui_Typography___default.a,
         { variant: 'title', color: 'inherit', noWrap: true },
-        'Clipped drawer'
+        'ADMINCP'
       )
     )
   );
@@ -98974,6 +98697,8 @@ var API_LOGIN = URL_API + 'user/login';
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Layouts_Header__ = __webpack_require__(591);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Layouts_Sidebar__ = __webpack_require__(577);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -98981,6 +98706,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
 
 
 
@@ -98999,7 +98726,8 @@ var Dashboard = function (_Component) {
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
                 null,
-                'dashboard'
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__Layouts_Header__["a" /* default */], null),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Layouts_Sidebar__["a" /* default */], null)
             );
         }
     }]);
@@ -99162,8 +98890,15 @@ var Login = function (_Component) {
                             case 10:
                                 _context.next = 12;
                                 return this.props.sendLogin(Email, Password).then(function (res) {
-                                    return console.log(res.data);
-                                }).catch(function (e) {
+                                    return console.log(res);
+                                }
+                                // res => {
+                                //     this.setState ({
+                                //         isLogin:true
+                                //     })
+                                // },
+
+                                ).catch(function (e) {
                                     console.error(e.response.data);
                                     if (e.response.data.Email) {
                                         _this2.setState({ errorEmail: e.response.data.Email });
@@ -99210,7 +98945,7 @@ var Login = function (_Component) {
             )];
             return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
                 'div',
-                null,
+                { className: 'container' },
                 __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
                     __WEBPACK_IMPORTED_MODULE_5_react_helmet__["Helmet"],
                     null,
@@ -101200,6 +100935,468 @@ exports.push([module.i, "body{\r\n    background-color: gainsboro;\r\n}\r\n\r\n.
 
 // exports
 
+
+/***/ }),
+/* 642 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListItemSidebar; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_material_ui_List__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_material_ui_List___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_material_ui_List__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_ui_icons_MoveToInbox__ = __webpack_require__(579);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__material_ui_icons_MoveToInbox___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__material_ui_icons_MoveToInbox__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__material_ui_icons_Home__ = __webpack_require__(643);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__material_ui_icons_Home___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__material_ui_icons_Home__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_icons_Settings__ = __webpack_require__(644);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__material_ui_icons_Settings___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__material_ui_icons_Settings__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_ui_icons_ViewList__ = __webpack_require__(645);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__material_ui_icons_ViewList___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__material_ui_icons_ViewList__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__material_ui_icons_Edit__ = __webpack_require__(646);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__material_ui_icons_Edit___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__material_ui_icons_Edit__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__material_ui_icons_ShoppingCart__ = __webpack_require__(647);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__material_ui_icons_ShoppingCart___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__material_ui_icons_ShoppingCart__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__material_ui_icons_PermMedia__ = __webpack_require__(648);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__material_ui_icons_PermMedia___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__material_ui_icons_PermMedia__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__material_ui_icons_Book__ = __webpack_require__(649);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__material_ui_icons_Book___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__material_ui_icons_Book__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__material_ui_icons_SupervisorAccount__ = __webpack_require__(650);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__material_ui_icons_SupervisorAccount___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__material_ui_icons_SupervisorAccount__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__material_ui_icons_PermIdentity__ = __webpack_require__(651);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__material_ui_icons_PermIdentity___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__material_ui_icons_PermIdentity__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__material_ui_icons_Description__ = __webpack_require__(652);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__material_ui_icons_Description___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__material_ui_icons_Description__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__material_ui_icons_Close__ = __webpack_require__(653);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__material_ui_icons_Close___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__material_ui_icons_Close__);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var ListItemSidebar = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+  'div',
+  null,
+  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItem"],
+    { button: true },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemIcon"],
+      null,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__material_ui_icons_Home___default.a, null)
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemText"], { primary: 'T\u1ED5ng quan' })
+  ),
+  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItem"],
+    { button: true },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemIcon"],
+      null,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__material_ui_icons_Settings___default.a, null)
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemText"], { primary: 'C\u1EA5u h\xECnh' })
+  ),
+  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItem"],
+    { button: true },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemIcon"],
+      null,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__material_ui_icons_ViewList___default.a, null)
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemText"], { primary: 'Danh m\u1EE5c' })
+  ),
+  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItem"],
+    { button: true },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemIcon"],
+      null,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__material_ui_icons_Edit___default.a, null)
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemText"], { primary: 'B\xE0i vi\u1EBFt' })
+  ),
+  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItem"],
+    { button: true },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemIcon"],
+      null,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__material_ui_icons_ShoppingCart___default.a, null)
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemText"], { primary: 'S\u1EA3n ph\u1EA9m' })
+  ),
+  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItem"],
+    { button: true },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemIcon"],
+      null,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__material_ui_icons_PermMedia___default.a, null)
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemText"], { primary: 'Media' })
+  ),
+  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItem"],
+    { button: true },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemIcon"],
+      null,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__material_ui_icons_Book___default.a, null)
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemText"], { primary: '\u0110\u01A1n h\xE0ng' })
+  ),
+  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItem"],
+    { button: true },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemIcon"],
+      null,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_12__material_ui_icons_Description___default.a, null)
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemText"], { primary: 'Tin \u0111\u0103ng' })
+  ),
+  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItem"],
+    { button: true },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemIcon"],
+      null,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__material_ui_icons_SupervisorAccount___default.a, null)
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemText"], { primary: 'Nh\xE2n vi\xEAn' })
+  ),
+  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItem"],
+    { button: true },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemIcon"],
+      null,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_11__material_ui_icons_PermIdentity___default.a, null)
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemText"], { primary: 'Th\xE0nh vi\xEAn' })
+  ),
+  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItem"],
+    { button: true },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemIcon"],
+      null,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_13__material_ui_icons_Close___default.a, null)
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_material_ui_List__["ListItemText"], { primary: '\u0110\u0103ng xu\u1EA5t' })
+  )
+);
+
+/***/ }),
+/* 643 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _createSvgIcon = __webpack_require__(43);
+
+var _createSvgIcon2 = _interopRequireDefault(_createSvgIcon);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = (0, _createSvgIcon2.default)(_react2.default.createElement(
+  'g',
+  null,
+  _react2.default.createElement('path', { d: 'M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z' })
+), 'Home');
+
+/***/ }),
+/* 644 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _createSvgIcon = __webpack_require__(43);
+
+var _createSvgIcon2 = _interopRequireDefault(_createSvgIcon);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = (0, _createSvgIcon2.default)(_react2.default.createElement(
+  'g',
+  null,
+  _react2.default.createElement('path', { d: 'M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z' })
+), 'Settings');
+
+/***/ }),
+/* 645 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _createSvgIcon = __webpack_require__(43);
+
+var _createSvgIcon2 = _interopRequireDefault(_createSvgIcon);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = (0, _createSvgIcon2.default)(_react2.default.createElement(
+  'g',
+  null,
+  _react2.default.createElement('path', { d: 'M4 14h4v-4H4v4zm0 5h4v-4H4v4zM4 9h4V5H4v4zm5 5h12v-4H9v4zm0 5h12v-4H9v4zM9 5v4h12V5H9z' })
+), 'ViewList');
+
+/***/ }),
+/* 646 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _createSvgIcon = __webpack_require__(43);
+
+var _createSvgIcon2 = _interopRequireDefault(_createSvgIcon);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = (0, _createSvgIcon2.default)(_react2.default.createElement(
+  'g',
+  null,
+  _react2.default.createElement('path', { d: 'M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z' })
+), 'Edit');
+
+/***/ }),
+/* 647 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _createSvgIcon = __webpack_require__(43);
+
+var _createSvgIcon2 = _interopRequireDefault(_createSvgIcon);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = (0, _createSvgIcon2.default)(_react2.default.createElement(
+  'g',
+  null,
+  _react2.default.createElement('path', { d: 'M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z' })
+), 'ShoppingCart');
+
+/***/ }),
+/* 648 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _createSvgIcon = __webpack_require__(43);
+
+var _createSvgIcon2 = _interopRequireDefault(_createSvgIcon);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = (0, _createSvgIcon2.default)(_react2.default.createElement(
+  'g',
+  null,
+  _react2.default.createElement('path', { d: 'M2 6H0v5h.01L0 20c0 1.1.9 2 2 2h18v-2H2V6zm20-2h-8l-2-2H6c-1.1 0-1.99.9-1.99 2L4 16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM7 15l4.5-6 3.5 4.51 2.5-3.01L21 15H7z' })
+), 'PermMedia');
+
+/***/ }),
+/* 649 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _createSvgIcon = __webpack_require__(43);
+
+var _createSvgIcon2 = _interopRequireDefault(_createSvgIcon);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = (0, _createSvgIcon2.default)(_react2.default.createElement(
+  'g',
+  null,
+  _react2.default.createElement('path', { d: 'M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z' })
+), 'Book');
+
+/***/ }),
+/* 650 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _createSvgIcon = __webpack_require__(43);
+
+var _createSvgIcon2 = _interopRequireDefault(_createSvgIcon);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = (0, _createSvgIcon2.default)(_react2.default.createElement(
+  'g',
+  null,
+  _react2.default.createElement('path', { d: 'M16.5 12c1.38 0 2.49-1.12 2.49-2.5S17.88 7 16.5 7C15.12 7 14 8.12 14 9.5s1.12 2.5 2.5 2.5zM9 11c1.66 0 2.99-1.34 2.99-3S10.66 5 9 5C7.34 5 6 6.34 6 8s1.34 3 3 3zm7.5 3c-1.83 0-5.5.92-5.5 2.75V19h11v-2.25c0-1.83-3.67-2.75-5.5-2.75zM9 13c-2.33 0-7 1.17-7 3.5V19h7v-2.25c0-.85.33-2.34 2.37-3.47C10.5 13.1 9.66 13 9 13z' })
+), 'SupervisorAccount');
+
+/***/ }),
+/* 651 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _createSvgIcon = __webpack_require__(43);
+
+var _createSvgIcon2 = _interopRequireDefault(_createSvgIcon);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = (0, _createSvgIcon2.default)(_react2.default.createElement(
+  'g',
+  null,
+  _react2.default.createElement('path', { d: 'M12 5.9c1.16 0 2.1.94 2.1 2.1s-.94 2.1-2.1 2.1S9.9 9.16 9.9 8s.94-2.1 2.1-2.1m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z' })
+), 'PermIdentity');
+
+/***/ }),
+/* 652 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _createSvgIcon = __webpack_require__(43);
+
+var _createSvgIcon2 = _interopRequireDefault(_createSvgIcon);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = (0, _createSvgIcon2.default)(_react2.default.createElement(
+  'g',
+  null,
+  _react2.default.createElement('path', { d: 'M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z' })
+), 'Description');
+
+/***/ }),
+/* 653 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _createSvgIcon = __webpack_require__(43);
+
+var _createSvgIcon2 = _interopRequireDefault(_createSvgIcon);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = (0, _createSvgIcon2.default)(_react2.default.createElement(
+  'g',
+  null,
+  _react2.default.createElement('path', { d: 'M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z' })
+), 'Close');
 
 /***/ })
 /******/ ]);

@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import Header from '../../../Layouts/Header';
+import Sidebar from '../../../Layouts/Sidebar';
 
 class Dashboard extends Component {
     render() {
         return (
             <div>
-                {'dashboard'}
+                <Header/>
+                <Sidebar/>
             </div>
         );
     }

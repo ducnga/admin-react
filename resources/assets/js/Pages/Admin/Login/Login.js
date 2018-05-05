@@ -12,12 +12,13 @@ import Dialog, {
 import '../../../../css/styles.css';
 const styles = theme => ({
     button: {
-        margin: theme.spacing.unit,
+      margin: theme.spacing.unit,
     },
     div:{
         margin:'79px',
     }
 });
+
 
 class Login extends Component {
     constructor(props) {
@@ -53,14 +54,21 @@ class Login extends Component {
         }
         else {
             await this.props.sendLogin(Email, Password)
-                .then(res => console.log(res.data))
+                .then(
+                    res => console.log(res)
+                    // res => {
+                    //     this.setState ({
+                    //         isLogin:true
+                    //     })
+                    // },
+                   
+                )
                 .catch(e => {
                     console.error(e.response.data);
                     if (e.response.data.Email) { this.setState({ errorEmail: e.response.data.Email }) }
                     if (e.response.data.Password) { this.setState({ errorPassword: e.response.data.Password }) }
                     if (e.response.data.Msg) { this.setState({ Msg: e.response.data.Msg, open: true }) }
                 });
-            // console.log(this.props.Login);
         }
     }
     handleOpen() {
@@ -77,7 +85,7 @@ class Login extends Component {
             </Button>
         ];
         return (
-            <div>
+            <div className='container'>
                 <Helmet>
                     <title>Đăng nhập vào quản trị website</title>
                 </Helmet>
