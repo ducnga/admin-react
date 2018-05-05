@@ -26,7 +26,7 @@ export const ListItemSidebar = (
       <ListItemIcon>
         <Settings />
       </ListItemIcon>
-      <ListItemText primary="Cấu hình" />
+      <ListItemText primary="Cấu hình" /> 
     </ListItem>
     <ListItem button>
       <ListItemIcon>
