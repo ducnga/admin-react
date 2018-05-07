@@ -62,5 +62,5 @@ function mapDispatchToProps(dispatch) {
 		checkToken: () => dispatch(get_token())
 	};
 }
-
+ 
 export default connect(mapStateToProps, mapDispatchToProps, null, { pure: false })(Routes)
