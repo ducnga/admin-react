@@ -3,6 +3,7 @@ import { Route, Switch, Link, Redirect, IndexRoute } from 'react-router-dom';
 import { connect } from 'react-redux';
 // import Loadable from 'loadable-components';
 import asyncComponent from './AsyncComponent';
+import Axios from 'axios';
 // const Loading = () => <div>Loading...</div>;
 // const Dashboard = Loadable (() => require('./../../container/Admin/Dashboard/DashboardContainer'));
 

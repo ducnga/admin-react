@@ -6,5 +6,5 @@ export default (Email, Password) => axios({
     url: API_LOGIN,
 }).then(Respon => {
     console.log(Respon.data);
-    localStorage.setItem('jwt_token', Respon.data.token);
+    localStorage.setItem('jwt_token', Respon.data.token);  
 })
