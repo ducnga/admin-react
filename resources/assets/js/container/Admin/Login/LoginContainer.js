@@ -6,7 +6,10 @@ import Login from './../../../Pages/Admin/Login/Login';
 
 function mapStateToProps(state) {
     return {
-        Login: state.Login
+        isLogin: state.Login.isLogin,
+        errorEmail: state.Login.errorEmail,
+        errorPassword: state.Login.errorPassword,
+        Msg: state.Login.Msg,
     };
 }
 function mapDispatchToProps(dispatch) {
@@ -15,4 +18,4 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps,null,{ pure: false })(Login);

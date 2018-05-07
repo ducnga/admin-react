@@ -1,52 +1,68 @@
 import React, { Component } from 'react';
-import { Route, Switch, Link, Redirect, IndexRoute } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-// import Loadable from 'loadable-components';
-import asyncComponent from './AsyncComponent';
-// const Loading = () => <div>Loading...</div>;
-// const Dashboard = Loadable (() => require('./../../container/Admin/Dashboard/DashboardContainer'));
-
-// const LoginContainer =Loadable({
-// 	loader: () => require('./../../container/Admin/Login/LoginContainer')
-// 	.then(m => m.LoginContainer),
-// 	loading: Loading,
-// });
-const Dashboard = asyncComponent(() =>
-	require('./../../container/Admin/Dashboard/DashboardContainer'));
-
-const LoginContainer = asyncComponent(() =>
-	require('./../../container/Admin/Login/LoginContainer'));
+import { get_token } from './../../actions/Login';
+// import asyncComponent from './AsyncComponent';
+import Loadable from 'react-loadable';
+import { LinearProgress } from 'material-ui/Progress';
+const Loading = () => <div><LinearProgress /></div>;
+const Dashboard = Loadable({
+	loader: () =>
+		System.import('./../../container/Admin/Dashboard/DashboardContainer'),
+	loading: Loading,
+});
+const LoginContainer = Loadable({
+	loader: () =>
+		System.import('./../../container/Admin/Login/LoginContainer'),
+	loading: Loading,
+});
 
 class Routes extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			isLogin: props.isLogin
-		}
+		this.state = ({
+			isLoadding:false
+		})
+	}
+	async componentDidMount() {
+		await this.props.checkToken();
+
+				this.setState({
+					isLoadding:true
+				})
 	}
 	render() {
+		const { isLogin } = this.props;
+		if(!this.state.isLoadding){
+			return <div><LinearProgress /></div>;
+		}
 		return (
 			<Switch>
 				<Route exact path="/" component={Dashboard} />
-				<Route path="/login-system" component={LoginContainer} />
+				<Route exact path="/login-system" component={LoginContainer} />
 				<Route path="/xjk-system" render={() =>
-					(this.state.isLogin === false) ?
+					(!isLogin) ?
 						(<Redirect to="/login-system" />)
 						:
-						(Dashboard)
+						(<Dashboard />)
 				}
 				/>
-				<Route path="/list-user" component={Dashboard} />
-				<Route path="/add-user" component={Dashboard} />
-				<Route path="/edit-user/:id" component={Dashboard} />
+				<Route exact path="/xjk-system/list-user" component={Dashboard} />
+				<Route exact path="/xjk-system/add-user" component={Dashboard} />
+				<Route exact path="/xjk-system/edit-user/:id" component={Dashboard} />
 
 			</Switch>
 		);
 	}
 }
 function mapStateToProps(state) {
-    return {
-        isLogin: state.Login.isLogin
-    };
+	return {
+		isLogin: state.Login.isLogin
+	};
 }
-export default connect(mapStateToProps, null)(Routes)
+function mapDispatchToProps(dispatch) {
+	return {
+		checkToken: () => dispatch(get_token())
+	};
+}
+export default connect(mapStateToProps, mapDispatchToProps, null, { pure: false })(Routes)

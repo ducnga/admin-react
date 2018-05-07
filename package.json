@@ -27,6 +27,7 @@
     "loadable-components": "^1.4.0",
     "material-ui": "^1.0.0-beta.44",
     "materialize-css": "^1.0.0-rc.1",
+    "react-async-component": "^2.0.0",
     "react-helmet": "^5.2.0",
     "react-loadable": "^5.4.0",
     "react-materialize": "^2.2.0",

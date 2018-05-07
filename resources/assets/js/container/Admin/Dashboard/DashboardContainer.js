@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
-import { send_login } from './../../../actions/Login'
+// import { send_login } from './../../../actions/Login'
 
 import Dashboard from './../../../Pages/Admin/Dashboard/Dashboard';
 
-function mapStateToProps(state) {
-    return {
-        Login: state.Login
-    };
-}
-function mapDispatchToProps(dispatch) {
-    return {
-        sendLogin: (Email, Password) => dispatch(send_login(Email, Password))
-    };
-}
+// function mapStateToProps(state) {
+//     return {
+//         Login: state.Login
+//     };
+// }
+// function mapDispatchToProps(dispatch) {
+//     return {
 
-export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
+//     };
+// }
+// connect(null, null, null, { pure: false })
+export default (Dashboard);

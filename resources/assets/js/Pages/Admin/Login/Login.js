@@ -3,6 +3,7 @@ import TextField from 'material-ui/TextField';
 import { withStyles } from 'material-ui/styles';
 import Button from 'material-ui/Button';
 import { Helmet } from "react-helmet";
+import { Redirect } from 'react-router-dom';
 import Dialog, {
     DialogActions,
     DialogContent,
@@ -12,10 +13,10 @@ import Dialog, {
 import '../../../../css/styles.css';
 const styles = theme => ({
     button: {
-      margin: theme.spacing.unit,
+        margin: theme.spacing.unit,
     },
-    div:{
-        margin:'79px',
+    div: {
+        margin: '79px',
     }
 });
 
@@ -52,23 +53,10 @@ class Login extends Component {
             this.setState({ errorPassword: 'Vui lòng nhập mật khẩu' });
         }
         else {
-            await this.props.sendLogin(Email, Password)
-                .then(
-                    // res => console.log(res)
-                    res => {
-                        this.setState ({
-                            isLogin:true,
-                        }),
-                        console.log(this.state);
-                    },
-                   
-                )
-                .catch(e => {
-                    console.error(e.response.data);
-                    if (e.response.data.Email) { this.setState({ errorEmail: e.response.data.Email }) }
-                    if (e.response.data.Password) { this.setState({ errorPassword: e.response.data.Password }) }
-                    if (e.response.data.Msg) { this.setState({ Msg: e.response.data.Msg, open: true }) }
-                });
+            await this.props.sendLogin(Email, Password);
+            this.setState({ errorEmail: this.props.errorEmail });
+            this.setState({ errorPassword: this.props.errorPassword });
+            if (this.props.Msg) { this.setState({ Msg: this.props.Msg, open: true }) };
         }
     }
     handleOpen() {
@@ -84,6 +72,9 @@ class Login extends Component {
                 Ok
             </Button>
         ];
+        if(this.props.isLogin===true){
+            return <Redirect to="/xjk-system" />
+        }
         return (
             <div className='container'>
                 <Helmet>
@@ -146,4 +137,4 @@ class Login extends Component {
         );
     }
 }
-export default (Login)
+export default Login

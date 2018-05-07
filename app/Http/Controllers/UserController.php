@@ -47,6 +47,17 @@ class UserController extends Controller
         } catch (JWTAuthException $e) {
             return response()->json(['Không thể tạo token'], 500);
         }
-        return response()->json(compact('token'));
+        $user = JWTAuth::toUser($token);
+        return response()->json(compact('token','user'));
+    }
+    public function postCheckToken(Request $request){
+        if ($request->token)
+        {
+            $user = JWTAuth::toUser($request->token);
+            return response()->json(['user' => $user,'error'=>null]);
+        }
+        else{
+            return response()->json(['msg'=>'chưa có token'],422);
+        }
     }
 }

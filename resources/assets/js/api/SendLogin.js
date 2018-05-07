@@ -4,6 +4,5 @@ export default (Email, Password) => axios({
     method: 'post',
     data: { Email, Password },
     url: API_LOGIN,
-}).then(Respon => {
-    console.log(Respon.data);
-})
+}).then(Respon => Respon.data)
+    // .catch(e => e.response.data)
