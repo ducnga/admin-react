@@ -51,7 +51,9 @@ class UserController extends Controller
     }
 
     public function Token(Request $request){
-        $token = $request->jwt_token;
+        $token = $request->token;
+        // $decode = JWTAuth::decode($token);
+
         try{
             $user = JWTAuth::toUser($token);
             return response()->json($user);

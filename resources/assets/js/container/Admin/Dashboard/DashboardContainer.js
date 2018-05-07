@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { send_login } from './../../../actions/Login'
+import { send_token } from './../../../actions/Token'
 
 import Dashboard from './../../../Pages/Admin/Dashboard/Dashboard';
 
@@ -11,7 +11,7 @@ function mapStateToProps(state) {
 }
 function mapDispatchToProps(dispatch) {
     return {
-        sendLogin: (Email, Password) => dispatch(send_login(Email, Password))
+        
     };
 }
 

@@ -1,5 +1,6 @@
 import * as Types from './../constants/Login';
 import SendLogin from './../api/SendLogin';
+import SendToken from './../api/SendToken';
 
 export const send_login = (Email, Password) => dispath =>
     SendLogin(Email, Password)
@@ -23,6 +24,28 @@ export const check_login = () => {
     }
 }
 
-// export const check_token = dispath => {
+export const send_token = (jwt_token) => dispath =>
+    SendToken(jwt_token)
+        .then(data => dispath(token_success(data)))
+        .catch(dispath(token_expired()));
 
-// }
+export const get_token = () => dispatch => 
+    
+    { 
+        let token = localStorage.getItem('jwt_token');
+        if (token) 
+        { 
+            dispatch(send_token(token)); 
+        } 
+    };
+export const token_success = () => {
+    return {
+        type: Types.TOKEN_SUCCESS
+    }
+}
+
+export const token_expired = () => {
+    return {
+        type: Types.TOKEN_EXPIRED
+    }
+}

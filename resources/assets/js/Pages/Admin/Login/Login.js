@@ -3,7 +3,7 @@ import TextField from 'material-ui/TextField';
 import { withStyles } from 'material-ui/styles';
 import Button from 'material-ui/Button';
 import { Helmet } from "react-helmet";
-import {Redirect} from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import Dialog, {
     DialogActions,
     DialogContent,
@@ -14,10 +14,10 @@ import '../../../../css/styles.css';
 import Axios from 'axios';
 const styles = theme => ({
     button: {
-      margin: theme.spacing.unit,
+        margin: theme.spacing.unit,
     },
-    div:{   
-        margin:'79px',
+    div: {
+        margin: '79px',
     }
 });
 
@@ -71,15 +71,14 @@ class Login extends Component {
         this.setState({ open: false });
     };
     render() {
-        if(localStorage.getItem('jwt_token')){
-            return (<Redirect to='/xjk-system'/>)
-        }
-        console.log(typeof localStorage.getItem('jwt_token')== 'string');
         const actions = [
             <Button variant="raised" color="primary" onClick={this.handleClose.bind(this)} >
                 Ok
             </Button>
         ];
+        if(this.props.Login.isLogin === true){
+            return <Redirect to='/xjk-system'/>
+        }
         return (
             <div className='container'>
                 <Helmet>
@@ -141,5 +140,6 @@ class Login extends Component {
             </div>
         );
     }
+
 }
 export default (Login)

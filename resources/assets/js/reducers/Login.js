@@ -25,6 +25,19 @@ var myReducers = (state = initialState, action) => {
                 isLogin: true,
                 Msg: 'Đăng nhập thành công'
             };
+        case types.TOKEN_EXPIRED:
+            return {
+                ...state,
+                isLogin: false,
+                Msg: 'Đăng nhập thất bại'
+            };
+
+        case types.TOKEN_SUCCESS:
+            return {
+                ...state,
+                isLogin: true,
+                Msg: 'Đăng nhập thành công'
+            };
 
         default: return state;
     }
