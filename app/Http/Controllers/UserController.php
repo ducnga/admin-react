@@ -60,4 +60,16 @@ class UserController extends Controller
             return response()->json(['msg'=>'chưa có token'],422);
         }
     }
+
+    public function Token(Request $request){
+        $token = $request->token;
+        // $decode = JWTAuth::decode($token);
+
+        try{
+            $user = JWTAuth::toUser($token);
+            return response()->json($user);
+        }catch(JWTAuthException $e){
+            return response()->json(['Lỗi'], 500);
+        }
+    }
 }

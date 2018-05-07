@@ -26,10 +26,7 @@ class Routes extends Component {
 	}
 	async componentDidMount() {
 		await this.props.checkToken();
-
-				this.setState({
-					isLoadding:true
-				})
+		this.setState({isLoadding:true})
 	}
 	render() {
 		const { isLogin } = this.props;

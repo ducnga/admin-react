@@ -16443,11 +16443,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return CHECK_TOKEN_FAIL; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return LOGIN_SUCCESS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return LOGIN_FAIL; });
+/* unused harmony export TOKEN_EXPIRED */
+/* unused harmony export TOKEN_SUCCESS */
 var CHECK_LOGIN = 'CHECK_LOGIN';
 var CHECK_TOKEN_SUCCESS = 'CHECK_TOKEN_SUCCESS';
 var CHECK_TOKEN_FAIL = 'CHECK_TOKEN_FAIL';
 var LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 var LOGIN_FAIL = 'LOGIN_FAIL';
+var TOKEN_EXPIRED = 'TOKEN_EXPIRED';
+var TOKEN_SUCCESS = 'TOKEN_SUCCESS';
 
 /***/ }),
 /* 234 */
@@ -96260,10 +96264,7 @@ var Routes = function (_Component) {
 								return this.props.checkToken();
 
 							case 2:
-
-								this.setState({
-									isLoadding: true
-								});
+								this.setState({ isLoadding: true });
 
 							case 3:
 							case 'end':
