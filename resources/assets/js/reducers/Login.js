@@ -7,6 +7,7 @@ var initialState = {
 };
 
 var myReducers = (state = initialState, action) => {
+    const {data} = action;
     switch (action.type) {
         case types.CHECK_LOGIN:
             return state;
@@ -18,6 +19,7 @@ var myReducers = (state = initialState, action) => {
             };
 
         case types.LOGIN_SUCCESS:
+            localStorage.setItem('jwt_token', data.token);
             return {
                 ...state,
                 isLogin: true,

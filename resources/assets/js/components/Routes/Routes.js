@@ -26,20 +26,28 @@ class Routes extends Component {
 		}
 	}
 	render() {
+		var jwt_token = localStorage.getItem('jwt_token');
+		console.log(typeof jwt_token);
 		return (
 			<Switch>
 				<Route exact path="/" component={Dashboard} />
-				<Route path="/login-system" component={LoginContainer} />
+				<Route exact path="/login-system" component={LoginContainer} />
 				<Route path="/xjk-system" render={() =>
-					(this.state.isLogin === false) ?
-						(<Redirect to="/login-system" />)
+					
+					(jwt_token) ?
+						(	
+							(Dashboard)
+							// (<Redirect to="/14" />)
+						)
 						:
-						(Dashboard)
+						(<Redirect to="/login-system" />)
+						
 				}
 				/>
-				<Route path="/list-user" component={Dashboard} />
-				<Route path="/add-user" component={Dashboard} />
-				<Route path="/edit-user/:id" component={Dashboard} />
+				<Route exact path="/xjk-system" component={Dashboard} />
+				<Route exact path="/xjk-system/list-user" component={Dashboard} />
+				<Route exact path="/xjk-system/add-user" component={Dashboard} />
+				<Route exact path="/xjk-system/edit-user/:id" component={Dashboard} />
 
 			</Switch>
 		);
@@ -50,4 +58,5 @@ function mapStateToProps(state) {
         isLogin: state.Login.isLogin
     };
 }
-export default connect(mapStateToProps, null)(Routes)
+
+export default connect(mapStateToProps, null,null,{pure:false})(Routes)

@@ -3,7 +3,7 @@ import SendLogin from './../api/SendLogin';
 
 export const send_login = (Email, Password) => dispath =>
     SendLogin(Email, Password)
-        .then(data => dispath(login_success(data)))
+        .then(data =>dispath(login_success(data)))
         .catch(dispath(login_fail()));
 export const login_success = (data) => {
     return {
@@ -17,9 +17,9 @@ export const login_fail = () => {
     }
 }
 
-export const check_login = () =>{
+export const check_login = () => {
     return {
-        type:Types.CHECK_LOGIN
+        type: Types.CHECK_LOGIN
     }
 }
 

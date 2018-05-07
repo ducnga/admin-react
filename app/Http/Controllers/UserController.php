@@ -49,4 +49,14 @@ class UserController extends Controller
         }
         return response()->json(compact('token'));
     }
+
+    public function Token(Request $request){
+        $token = $request->jwt_token;
+        try{
+            $user = JWTAuth::toUser($token);
+            return response()->json($user);
+        }catch(JWTAuthException $e){
+            return response()->json(['Lỗi'], 500);
+        }
+    }
 }

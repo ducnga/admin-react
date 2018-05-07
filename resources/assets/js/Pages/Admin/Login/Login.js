@@ -3,6 +3,7 @@ import TextField from 'material-ui/TextField';
 import { withStyles } from 'material-ui/styles';
 import Button from 'material-ui/Button';
 import { Helmet } from "react-helmet";
+import {Redirect} from 'react-router-dom';
 import Dialog, {
     DialogActions,
     DialogContent,
@@ -10,6 +11,7 @@ import Dialog, {
     DialogTitle,
 } from 'material-ui/Dialog';
 import '../../../../css/styles.css';
+import Axios from 'axios';
 const styles = theme => ({
     button: {
       margin: theme.spacing.unit,
@@ -53,21 +55,11 @@ class Login extends Component {
         }
         else {
             await this.props.sendLogin(Email, Password)
-                .then(
-                    // res => console.log(res)
-                    res => {
-                        this.setState ({
-                            isLogin:true,
-                        })
-                        console.log(this.state);
-                    },
-                   
-                )
                 .catch(e => {
-                    console.error(e.response.data);
-                    if (e.response.data.Email) { this.setState({ errorEmail: e.response.data.Email }) }
-                    if (e.response.data.Password) { this.setState({ errorPassword: e.response.data.Password }) }
-                    if (e.response.data.Msg) { this.setState({ Msg: e.response.data.Msg, open: true }) }
+                    console.error(e);
+                    // if (e.response.data.Email) { this.setState({ errorEmail: e.response.data.Email }) }
+                    // if (e.response.data.Password) { this.setState({ errorPassword: e.response.data.Password }) }
+                    // if (e.response.data.Msg) { this.setState({ Msg: e.response.data.Msg, open: true }) }
                 });
         }
     }
@@ -79,6 +71,10 @@ class Login extends Component {
         this.setState({ open: false });
     };
     render() {
+        if(localStorage.getItem('jwt_token')){
+            return (<Redirect to='/xjk-system'/>)
+        }
+        console.log(typeof localStorage.getItem('jwt_token')== 'string');
         const actions = [
             <Button variant="raised" color="primary" onClick={this.handleClose.bind(this)} >
                 Ok

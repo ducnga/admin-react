@@ -15,3 +15,4 @@ use Illuminate\Http\Request;
 
 Route::post('user/add', ['as'=>'postAddUser','uses' => 'UserController@postAddUser']);
 Route::post('user/login', ['as'=>'postLogin','uses' => 'UserController@postLogin']);
+Route::post('user/token','UserController@Token')->name('token');
