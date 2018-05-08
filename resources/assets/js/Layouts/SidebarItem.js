@@ -30,7 +30,7 @@ export const ListItemSidebar = (
         <Link to='/1'>Tổng quan</Link>
       </li>
       <li>
-        <a href='#'>Cấu hình</a>
+        <a>Cấu hình</a>
         <ul className="submenu">
           <li>
             <Link to='/2'>Thông tin công ty</Link>
