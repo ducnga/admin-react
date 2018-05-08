@@ -37,13 +37,14 @@ class Routes extends Component {
 			<Switch>
 				<Route exact path="/" component={Dashboard} />
 				<Route exact path="/login-system" component={LoginContainer} />
+				<Route exact path="/xjk-system/list-user" component={Dashboard} />
 				<Route
 					path="/xjk-system"
 					render={
 						() => (isLogin) ? (<Dashboard />) : (<Redirect to="/login-system" />)
 					}
 				/>
-				<Route exact path="/xjk-system/list-user" component={Dashboard} />
+				
 				<Route exact path="/xjk-system/add-user" component={Dashboard} />
 				<Route exact path="/xjk-system/edit-user/:id" component={Dashboard} />
 
