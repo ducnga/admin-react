@@ -28,3 +28,44 @@ body{
         width: 100%;
     }
 }
+
+.mainmenu, .submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+.mainmenu a {
+    display: block;
+    background-color:white;
+    text-decoration: none;
+    padding: 10px;
+    color: #000;
+    padding-left:15px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 600;
+}
+  
+.mainmenu a:hover {
+      background-color: #ebebeb;
+}
+  
+.active{
+    display: block;
+    max-height: 200px;
+}
+  
+.submenu a {
+    background-color: white;
+    padding-left: 30px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: normal;
+}
+  
+.submenu a:hover {
+    background-color: #ebebeb;
+}
+
+.submenu {
+    display: none;
+}

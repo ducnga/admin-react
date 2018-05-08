@@ -20,96 +20,36 @@ import ExpansionPanel, {
 } from 'material-ui/ExpansionPanel';
 import Typography from 'material-ui/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-
+import Button from 'material-ui/Button';
+import { Link } from 'react-router-dom';
 
 export const ListItemSidebar = (
   <div>
-    <ListItem button>
-      <ListItemIcon>
-        <HomeIcon />
-      </ListItemIcon>
-      <ListItemText primary="Tổng quan" />
-    </ListItem>
-
-    <ExpansionPanel>
-      <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-        <ListItemIcon>
-          <Settings />
-        </ListItemIcon>
-        <ListItemText primary="Cấu hình" />
-      </ExpansionPanelSummary>
-      <ExpansionPanelDetails>
-        <ul>
-          <ListItem button>
-            <ListItemIcon>
-              <Business />
-            </ListItemIcon>
-            <ListItemText primary="Công ty" />
-          </ListItem>
-          <ListItem button>
-            <ListItemIcon>
-              <HomeIcon />
-            </ListItemIcon>
-            <ListItemText primary="Công ty" />
-          </ListItem>
-          </ul>
-      </ExpansionPanelDetails>
-    </ExpansionPanel>
-
-    <ListItem button>
-      <ListItemIcon>
-        <ViewList />
-      </ListItemIcon>
-      <ListItemText primary="Danh mục" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <Edit />
-      </ListItemIcon>
-      <ListItemText primary="Bài viết" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <ShoppingCart />
-      </ListItemIcon>
-      <ListItemText primary="Sản phẩm" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <PermMedia />
-      </ListItemIcon>
-      <ListItemText primary="Media" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <Book />
-      </ListItemIcon>
-      <ListItemText primary="Đơn hàng" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <Description />
-      </ListItemIcon>
-      <ListItemText primary="Tin đăng" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <SupervisorAccount />
-      </ListItemIcon>
-      <ListItemText primary="Nhân viên" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <PermIdentity />
-      </ListItemIcon>
-      <ListItemText primary="Thành viên" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <Close />
-      </ListItemIcon>
-      <ListItemText primary="Đăng xuất" />
-    </ListItem>
+    <ul className="mainmenu">
+      <li>
+        <Link to='/1'>Tổng quan</Link>
+      </li>
+      <li>
+        <a href='#'>Cấu hình</a>
+        <ul className="submenu">
+          <li>
+            <Link to='/2'>Thông tin công ty</Link>
+          </li>
+          <li>
+            <Link to='/3'>Tổng quan</Link>
+          </li>
+          <li>
+            <Link to='/4'>Tổng quan</Link>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <Link to='/5'>Media</Link>
+      </li>
+      <li>
+        <Link to='/6'>Tổng quan</Link>
+      </li>
+    </ul>
   </div>
 );
 
