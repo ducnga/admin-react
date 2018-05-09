@@ -9,41 +9,28 @@ import { LinearProgress } from 'material-ui/Progress';
 
 const styles = theme => ({
     root: {
-      flexGrow: 1,
-      height: 430,
-      zIndex: 1,
-      overflow: 'hidden',
-      position: 'relative',
-      display: 'flex',
+        flexGrow: 1,
+        height: 430,
+        zIndex: 1,
+        overflow: 'hidden',
+        position: 'relative',
+        display: 'flex',
     },
     content: {
-      flexGrow: 1,
-      backgroundColor: theme.palette.background.default,
-      padding: theme.spacing.unit * 3,
-      minWidth: 0, // So the Typography noWrap works
+        flexGrow: 1,
+        backgroundColor: theme.palette.background.default,
+        padding: theme.spacing.unit * 3,
+        minWidth: 0, // So the Typography noWrap works
     },
     toolbar: theme.mixins.toolbar,
-  });
-  
+});
+
 class Master extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            loading: false,
-            isLogin: false
-        }
-    }
-    componentDidMount() {
-        setTimeout(() => this.setState({ loading: true }), 500);
-    }
 
     render() {
-        if (this.state.loading === false) {
-            return (
-                <div className="loadding"><LinearProgress /></div>
-            );
-        }
-        else if (this.state.isLogin === false) {
+        const getUrl = window.location.href;
+        const { classes } = this.props;
+        if (getUrl.indexOf("/login-system") > -1) {
             return <Routes />
         }
         else {
@@ -53,7 +40,7 @@ class Master extends Component {
                     <Sidebar />
                     <main className={classes.content}>
                         <div className={classes.toolbar} />
-                        <Typography noWrap><Routes /></Typography>
+                        <div><Routes /></div>
                     </main>
                 </div>
             );

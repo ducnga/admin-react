@@ -73,3 +73,11 @@ body{
 .submenu-active {
     display: block!important;
 }
+
+.card{
+    text-align: center;
+}
+
+.card div h1{
+    font-size: 35px;
+}
