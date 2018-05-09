@@ -1,9 +1,10 @@
 import * as types from './../constants/Login';
 var initialState = {
     isLogin: false,
+    isCheck: false,
     User: null,
-    errorEmail:null,
-    errorPassword:null,
+    errorEmail: null,
+    errorPassword: null,
     Msg: null,
     Token: null
 };
@@ -11,46 +12,47 @@ var initialState = {
 var myReducers = (state = initialState, action) => {
     const { data } = action;
     switch (action.type) {
-        case types.CHECK_LOGIN:
-            return state;
-
         case types.LOGIN_FAIL:
             return {
                 ...state,
                 isLogin: false,
-                errorEmail:data.Email ? data.Email: null,
-                errorPassword:data.Password ? data.Password:null,
+                isCheck: true,
+                errorEmail: data.Email ? data.Email : null,
+                errorPassword: data.Password ? data.Password : null,
                 Msg: 'Đăng nhập thất bại'
             };
 
         case types.LOGIN_SUCCESS:
-            localStorage.setItem('@token',data.token);
+            localStorage.setItem('@token', data.token);
             return {
                 ...state,
                 isLogin: true,
-                errorEmail:null,
-                errorPassword:null,
+                isCheck: true,
+                errorEmail: null,
+                errorPassword: null,
                 User: data.user,
                 Msg: 'Đăng nhập thành công'
             };
 
         case types.CHECK_TOKEN_FAIL:
-        localStorage.setItem('@token',null);
+            localStorage.removeItem('@token');
             return {
                 ...state,
-                isLogin:false,
-                User:null,
-                errorEmail:null,
-                errorPassword:null,
-                Msg: 'chưa đăng nhập'
+                isLogin: false,
+                isCheck: true,
+                User: null,
+                errorEmail: null,
+                errorPassword: null,
+                Msg: 'Chưa đăng nhập'
             };
 
         case types.CHECK_TOKEN_SUCCESS:
             return {
                 ...state,
                 isLogin: true,
-                errorEmail:null,
-                errorPassword:null,
+                errorEmail: null,
+                isCheck: true,
+                errorPassword: null,
                 User: data.user,
                 Msg: 'đã đăng nhập'
             };

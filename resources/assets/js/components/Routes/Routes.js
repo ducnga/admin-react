@@ -1,8 +1,10 @@
+
 import React, { Component } from 'react';
+
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { get_token } from './../../actions/Login';
-// import asyncComponent from './AsyncComponent';
+
 import Loadable from 'react-loadable';
 import { LinearProgress } from 'material-ui/Progress';
 const Loading = () => <div><LinearProgress /></div>;
@@ -16,37 +18,35 @@ const LoginContainer = Loadable({
 		System.import('./../../container/Admin/Login/LoginContainer'),
 	loading: Loading,
 });
-
 class Routes extends Component {
 	constructor(props) {
 		super(props);
-		this.state = ({
-			isLoadding:false
-		})
 	}
-	async componentDidMount() {
+	async componentWillMount() {
 		await this.props.checkToken();
-		this.setState({isLoadding:true})
 	}
 	render() {
-		const { isLogin } = this.props;
-		if(!this.state.isLoadding){
+		const { isLogin, isCheck } = this.props;
+		if (!isCheck) {
 			return <div><LinearProgress /></div>;
 		}
 		return (
 			<Switch>
 				<Route exact path="/" component={Dashboard} />
-				<Route exact path="/login-system" component={LoginContainer} />
-				<Route path="/xjk-system" render={() =>
-					(!isLogin) ?
-						(<Redirect to="/login-system" />)
-						:
-						(<Dashboard />)
-				}
+				<Route
+					exact
+					path="/login-system"
+					component={LoginContainer}
 				/>
-				<Route exact path="/xjk-system/list-user" component={Dashboard} />
-				<Route exact path="/xjk-system/add-user" component={Dashboard} />
-				<Route exact path="/xjk-system/edit-user/:id" component={Dashboard} />
+				<Route
+					path="/xjk-system"
+					render={(match) =>
+						(!isLogin) ?
+							(<Redirect to="/login-system" />)
+							:
+							(<Dashboard {...match} />)
+					}
+				/>
 
 			</Switch>
 		);
@@ -54,7 +54,8 @@ class Routes extends Component {
 }
 function mapStateToProps(state) {
 	return {
-		isLogin: state.Login.isLogin
+		isLogin: state.Login.isLogin,
+		isCheck: state.Login.isCheck
 	};
 }
 function mapDispatchToProps(dispatch) {

@@ -1,4 +1,4 @@
-webpackJsonp([1],{
+webpackJsonp([5],{
 
 /***/ 574:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -195,7 +195,7 @@ var SidebarItem = function (_Component) {
             null,
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
-              { to: '/system/company' },
+              { to: '/xjk-system/company' },
               'Th\xF4ng tin c\xF4ng ty'
             )
           ),
@@ -204,8 +204,8 @@ var SidebarItem = function (_Component) {
             null,
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Link */],
-              { to: '/list-user' },
-              'Danh s\xE1ch user'
+              { to: '/xjk-system' },
+              'Dashbord'
             )
           )
         )
@@ -308,6 +308,7 @@ var Dashboard = function (_Component) {
         value: function render() {
             var classes = this.props.classes;
 
+
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
                 { className: classes.root },
@@ -320,7 +321,7 @@ var Dashboard = function (_Component) {
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
                         null,
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_Routes_RouteAdmin__["a" /* default */], null)
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_Routes_RouteAdmin__["a" /* default */], this.props)
                     )
                 )
             );
@@ -377,37 +378,39 @@ var CompanyContainer = __WEBPACK_IMPORTED_MODULE_4_react_loadable___default()({
 	loading: Loading
 });
 
-var Routes = function (_Component) {
-	_inherits(Routes, _Component);
+var RouteAdmin = function (_Component) {
+	_inherits(RouteAdmin, _Component);
 
-	function Routes(props) {
-		_classCallCheck(this, Routes);
+	function RouteAdmin() {
+		_classCallCheck(this, RouteAdmin);
 
-		var _this = _possibleConstructorReturn(this, (Routes.__proto__ || Object.getPrototypeOf(Routes)).call(this, props));
-
-		_this.state = {
-			isLoadding: false
-		};
-		return _this;
+		return _possibleConstructorReturn(this, (RouteAdmin.__proto__ || Object.getPrototypeOf(RouteAdmin)).apply(this, arguments));
 	}
 
-	_createClass(Routes, [{
+	_createClass(RouteAdmin, [{
 		key: 'render',
-		value: function render(_ref) {
-			var match = _ref.match;
+
+		// constructor(props) {
+		// 	super(props);
+		// 	this.state = ({
+		// 		isLoadding: false
+		// 	})
+		// }
+		value: function render() {
 			var isLogin = this.props.isLogin;
 
-			console.log(match);
+			console.log('kiểm tra url', this.props);
+			console.log('checkurrl', this.props.match.url + '/company');
 			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 				__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["e" /* Switch */],
 				null,
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["d" /* Route */], { exact: true, path: '/', component: CompanyContainer }),
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["d" /* Route */], { exact: true, path: '/company', component: CompanyContainer })
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["d" /* Route */], { exact: true, path: '' + this.props.match.path, component: CompanyContainer }),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["d" /* Route */], { path: this.props.match.path + '/company', component: CompanyContainer })
 			);
 		}
 	}]);
 
-	return Routes;
+	return RouteAdmin;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
 function mapStateToProps(state) {
@@ -422,7 +425,7 @@ function mapDispatchToProps(dispatch) {
 		}
 	};
 }
-/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_2_react_redux__["b" /* connect */])(mapStateToProps, mapDispatchToProps, null, { pure: false })(Routes));
+/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_2_react_redux__["b" /* connect */])(null, null)(RouteAdmin));
 
 /***/ })
 
