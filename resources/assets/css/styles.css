@@ -29,7 +29,7 @@ body{
     }
 }
 
-.mainmenu, .submenu {
+.mainmenu, #submenu {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -55,17 +55,21 @@ body{
     max-height: 200px;
 }
   
-.submenu a {
+#submenu a {
     background-color: white;
     padding-left: 30px;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-weight: normal;
 }
   
-.submenu a:hover {
+#submenu a:hover {
     background-color: #ebebeb;
 }
 
-.submenu {
+#submenu {
     display: none;
+}
+
+.submenu-active {
+    display: block!important;
 }
