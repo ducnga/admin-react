@@ -13,6 +13,11 @@ const Dashboard = Loadable({
 		System.import('./../../container/Admin/Dashboard/DashboardContainer'),
 	loading: Loading,
 });
+const MasterContainer = Loadable({
+	loader: () =>
+		System.import('./../../container/Admin/MasterContainer'),
+	loading: Loading,
+});
 const LoginContainer = Loadable({
 	loader: () =>
 		System.import('./../../container/Admin/Login/LoginContainer'),
@@ -44,7 +49,7 @@ class Routes extends Component {
 						(!isLogin) ?
 							(<Redirect to="/login-system" />)
 							:
-							(<Dashboard {...match} />)
+							(<MasterContainer {...match} />)
 					}
 				/>
 

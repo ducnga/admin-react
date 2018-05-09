@@ -96250,13 +96250,19 @@ var Loading = function Loading() {
 };
 var Dashboard = __WEBPACK_IMPORTED_MODULE_5_react_loadable___default()({
 	loader: function loader() {
-		return __webpack_require__.e/* import() */(5).then(__webpack_require__.bind(null, 609));
+		return __webpack_require__.e/* import() */(1/* duplicate */).then(__webpack_require__.bind(null, 609));
+	},
+	loading: Loading
+});
+var MasterContainer = __WEBPACK_IMPORTED_MODULE_5_react_loadable___default()({
+	loader: function loader() {
+		return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 632));
 	},
 	loading: Loading
 });
 var LoginContainer = __WEBPACK_IMPORTED_MODULE_5_react_loadable___default()({
 	loader: function loader() {
-		return __webpack_require__.e/* import() */(4).then(__webpack_require__.bind(null, 610));
+		return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 610));
 	},
 	loading: Loading
 });
@@ -96321,7 +96327,7 @@ var Routes = function (_Component) {
 				__WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["d" /* Route */], {
 					path: '/xjk-system',
 					render: function render(match) {
-						return !isLogin ? __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Redirect */], { to: '/login-system' }) : __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(Dashboard, match);
+						return !isLogin ? __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Redirect */], { to: '/login-system' }) : __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(MasterContainer, match);
 					}
 				})
 			);

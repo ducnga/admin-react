@@ -8,6 +8,11 @@ import { get_token } from './../../actions/Login';
 import Loadable from 'react-loadable';
 import { LinearProgress } from 'material-ui/Progress';
 const Loading = () => <div><LinearProgress /></div>;
+const DashboardContainer = Loadable({
+	loader: () =>
+		System.import('./../../container/Admin/Dashboard/DashboardContainer'),
+	loading: Loading,
+});
 const CompanyContainer = Loadable({
 	loader: () =>
 		System.import('./../../container/Admin/Company/CompanyContainer'),
@@ -26,7 +31,7 @@ class RouteAdmin extends Component {
 		console.log('checkurrl',`${this.props.match.url}/company`);
 		return (
 			<Switch>
-				<Route exact path={`${this.props.match.path}`} component={CompanyContainer} />
+				<Route exact path={`${this.props.match.path}`} component={DashboardContainer} />
 				<Route path={`${this.props.match.path}/company`} component={CompanyContainer} />
 			</Switch>
 		);
