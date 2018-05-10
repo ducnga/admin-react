@@ -4,8 +4,9 @@ import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Sidebar from './../Layouts/Sidebar';
 import Header from './../Layouts/Header';
-import Routes from './Routes/Routes';
-import { LinearProgress } from 'material-ui/Progress';
+// import Routes from './Routes/Routes';
+import Admin from './Routes/Admin';
+
 
 const styles = theme => ({
     root: {
@@ -28,23 +29,23 @@ const styles = theme => ({
 class Master extends Component {
 
     render() {
-        const getUrl = window.location.href;
-        const { classes } = this.props;
-        if (getUrl.indexOf("/login-system") > -1) {
-            return <Routes />
-        }
-        else {
-            return (
-                <div className={classes.root}>
-                    <Header />
-                    <Sidebar />
-                    <main className={classes.content}>
-                        <div className={classes.toolbar} />
-                        <div><Routes /></div>
-                    </main>
-                </div>
-            );
-        }
+        // const getUrl = window.location.href;
+        // const { classes } = this.props;
+        // if (getUrl.indexOf("/login-system") > -1) {
+            return <Admin />
+        // }
+        // else {
+        //     return (
+        //         <div className={classes.root}>
+        //             <Header />
+        //             <Sidebar />
+        //             <main className={classes.content}>
+        //                 <div className={classes.toolbar} />
+        //                 <div><Routes /></div>
+        //             </main>
+        //         </div>
+        //     );
+        // }
     }
 }
 

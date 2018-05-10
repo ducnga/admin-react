@@ -29,27 +29,24 @@ class SidebarItem extends Component {
       <div>
         <ul className="mainmenu">
           <li>
-            <Link to='/xjk-system/list-user'>Tổng quan</Link>
+            <Link to='/'>Tổng quan</Link>
           </li>
           <li onClick={this.clickopen.bind(this)} >
             <a to='/'>Cấu hình</a>
             <ul id="submenu">
               <li>
-                <Link to='/2'>Thông tin công ty</Link>
+                <Link to='/xjk-system/company'>Thông tin công ty</Link>
               </li>
               <li>
-                <Link to='/3'>Tổng quan</Link>
+                <Link to='/'>Tổng quan</Link>
               </li>
               <li>
-                <Link to='/4'>Tổng quan</Link>
+                <Link to='/'>Tổng quan</Link>
               </li>
             </ul>
           </li>
           <li>
-            <Link to='/5'>Media</Link>
-          </li>
-          <li>
-            <Link to='/6'>Tổng quan</Link>
+            <Link to='/'>Media</Link>
           </li>
         </ul>
       </div>

@@ -1,6 +1,7 @@
 import * as types from './../constants/Login';
 var initialState = {
     isLogin: false,
+    isCheck: false,
     User: null,
     Msg: null,
     Token: null
@@ -26,9 +27,12 @@ var myReducers = (state = initialState, action) => {
                 Msg: 'Đăng nhập thành công'
             };
         case types.TOKEN_EXPIRED:
+        localStorage.removeItem('jwt_token');
+        // console.log('xxxxxxxxxxxxxxxxxxxxx');
             return {
                 ...state,
                 isLogin: false,
+                isCheck: true,
                 Msg: 'Đăng nhập thất bại'
             };
 
@@ -36,6 +40,7 @@ var myReducers = (state = initialState, action) => {
             return {
                 ...state,
                 isLogin: true,
+                isCheck: true,
                 Msg: 'Đăng nhập thành công'
             };
 

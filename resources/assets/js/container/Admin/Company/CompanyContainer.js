@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import Dashboard from './../../../Pages/Admin/Dashboard/Dashboard';
+import Company from './../../../Pages/Admin/Company/Company';
 
 function mapStateToProps(state) {
     return {
@@ -14,4 +14,4 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-export default connect(null, null)(Dashboard);
+export default connect(null, null)(Company);

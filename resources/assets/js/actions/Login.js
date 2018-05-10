@@ -27,7 +27,7 @@ export const check_login = () => {
 export const send_token = (jwt_token) => dispath =>
     SendToken(jwt_token)
         .then(data => dispath(token_success(data)))
-        .catch(dispath(token_expired()));
+        .catch(e=>{console.log(e.response);return dispath(token_expired())});
 
 export const get_token = () => dispatch => 
     
@@ -35,8 +35,12 @@ export const get_token = () => dispatch =>
         let token = localStorage.getItem('jwt_token');
         if (token) 
         { 
-            dispatch(send_token(token)); 
+            return dispatch(send_token(token)); 
         } 
+        else{
+            return dispatch(token_expired());
+        }
+
     };
 export const token_success = () => {
     return {

@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Header from '../../../Layouts/Header';
-import Sidebar from '../../../Layouts/Sidebar';
 import Axios from 'axios';
 import Card, { CardContent } from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
