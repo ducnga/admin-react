@@ -15,7 +15,6 @@
 //     return view('admin.master');
 // });
 
-
 Route::get('/{path?}', function () {
     return view('admin.master');
 })->where('path', '.*');
